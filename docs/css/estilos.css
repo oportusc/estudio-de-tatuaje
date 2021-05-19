@@ -148,7 +148,15 @@ a {
         height: 40px;
     }
 }
-#foto-contacto img{
-    width: 80%;
+#foto-contacto{
+    
+    display: block;
+    margin: auto;
+    width: 200px;
     height: auto;
+}
+
+#parrafo-contacto{
+    padding-top: 2.5rem;
+    text-align: center;
 }

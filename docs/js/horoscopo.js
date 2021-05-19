@@ -1,8 +1,21 @@
 $(document).ready(function(){
+    $.get("https://api.adderou.cl/tyaas/", function(data){
+        $.each(data.titulo, function(i,item){
+            var fecha = "<h2>"+item.titulo+"</h2>"
+
+            $("#fecha-horoscopo").append(fecha);
+            // console.log(item.titulo)
+        })
+    })
+})
+
+
+
+$(document).ready(function(){
     $.get("https://api.adderou.cl/tyaas/",function (data){
         
         $.each(data.horoscopo , function(i, item){
-            var lista = "<ol><li>"+"Fecha del Signo: "+item.fechaSigno+"</li><li>"+ "Amor: "+item.amor + "</li><li>" +"Salud: "+ item.salud + "</li><li>" +"Dinero: "+item.dinero + "</li><li>" +"Color: "+ item.color +"</li></ol>"
+            var lista = "<ul><li>"+"Fecha del Signo: "+item.fechaSigno+"</li><li>"+ "Amor: "+item.amor + "</li><li>" +"Salud: "+ item.salud + "</li><li>" +"Dinero: "+item.dinero + "</li><li>" +"Color: "+ item.color +"</li></ul>"
 
             $("#card-"+item.nombre).append(lista);
             console.log(item.nombre)
