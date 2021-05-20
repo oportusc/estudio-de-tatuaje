@@ -136,18 +136,20 @@ a {
 }
 
 @media (min-width:0px) {
-    #redes {
+    #redes1 {
         width: 60px;
         height: 60px;
     }
 }
 
-@media (max-width:576px) {
-    #redes {
-        width: 40px;
-        height: 40px;
+@media (min-width:0px) {
+    #redes2 {
+        width: 60px;
+        height: 60px;
     }
 }
+
+
 #foto-contacto{
     
     display: block;
