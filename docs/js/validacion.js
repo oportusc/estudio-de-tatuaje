@@ -34,51 +34,25 @@ $(document).ready(function () {
     });
 });
 
-// $(document).ready(function () {
 
-//     // GESTIONAMOS EL EVENTO DEL BOTON
-//     $("#submit").click(function (event) {
+const form = document.getElementById("contact-formulario");
 
-//         event.preventDefault();
-
-//         var nombre = $("#nombre").val();
-//         var apellido = $("#apellido").val();
-//         var email = $("#email").val();
-//         var comment = $("#comment").val();
-
-
-//         alert("Ingreso: " + nombre + apellido + email + comment);
-
-//         // $("ol").append("<li>  " + producto + "   </li>");
-
-//     });
-//     //   cierre del click de submit
-// });
-  //   cierre del ready
+form.addEventListener("submit", function (event) {
+    // ---> Esto es para que no se caiga la pagina al dar en "Enviar"
+    event.preventDefault();
 
 
 
 
+    var nombre = $('#nombre').val();
+    var apellido = $('#apellido').val();
+    var email = $('#email').val();
+    var comment = $('#comment').val();
 
-
-// const form = document.getElementById("submit");
-
-// form.addEventListener("click", function (event) {
-//     // ---> Esto es para que no se caiga la pagina al dar en "Enviar"
-//     event.preventDefault();
-
-
-
-
-    // var nombre = $('#nombre').val();
-    // var apellido = $('#apellido').val();
-    // var email = $('#email').val();
-    // var comment = $('#comment').val();
-
-    //   Si los campos son diferentes de "Vacío"
-    // if (nombre == True && apellido == True && email == True && comment == True) {
+    // if (nombre != "" && apellido != "" && email != "" && comment != "") {
     //     alert("Formulario enviado con éxito");
+
     // } else {
     //     alert("Por favor rellene todos los campos.");
     // }
-// })
+});
